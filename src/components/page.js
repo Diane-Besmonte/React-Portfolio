@@ -10,6 +10,7 @@ import nodejs from "../assets/images/node-js.svg"
 import mongodb from "../assets/images/mongodb.svg"
 import github from "../assets/images/github.svg"
 import vscode from "../assets/images/vs-code.svg"
+import projectpic from "../assets/images/Project Picture.png"
 
 const HeroBanner = () => {
   return (
@@ -19,12 +20,10 @@ const HeroBanner = () => {
             <h1>Web Developer</h1>
             <p>Building something out of <span>ideas and innovation</span> by transforming it <br /> into a working <span>responsive websites</span></p>
             <div className="cta">
-                <button>Resume</button>
-                <button>Contact</button>
+                <a href="#resume"><button>Resume</button></a>
+                <a href="#contact"><button>Contact</button></a>
             </div>
         </section>
-        
-
     </>
   )
 }
@@ -48,7 +47,6 @@ const About = () => {
       </>
     )
 }
-
 
 
 const Skills = () => {
@@ -75,6 +73,7 @@ const Skills = () => {
         },
         {
             title: 'React JS',
+            
             img: reactjs,
         },
         {
@@ -114,9 +113,84 @@ const Skills = () => {
 }
 
 const Projects = () => {
+    // Projects Data 
+    const projectCard = [
+        {
+            title: 'Project Title',
+            desc: 'Project description about the tasks or roles for this  project from start to finish. Project description about the tasks or roles for this  project from start to finish.  Project description about the tasks or roles for this  project from start to finish. Project description about the tasks or roles for this  project from start to finish.  ',
+            badge: ["HTML", "CSS", "JavaScript"],
+            img: projectpic,
+            demo: '#link',
+            code: '#link',
+        },
+        {
+            title: 'Project Title',
+            desc: 'Project description about the tasks or roles for this  project from start to finish. Project description about the tasks or roles for this  project from start to finish.  Project description about the tasks or roles for this  project from start to finish. Project description about the tasks or roles for this  project from start to finish.  ',
+            badge: ["React", "CSS"],
+            img: projectpic,
+            demo: '#link',
+            code: '#link',
+        },
+        {
+            title: 'Project Title',
+            desc: 'Project description about the tasks or roles for this  project from start to finish. Project description about the tasks or roles for this  project from start to finish.  Project description about the tasks or roles for this  project from start to finish. Project description about the tasks or roles for this  project from start to finish.  ',
+            badge: ["HTML", "CSS", "JavaScript"],
+            img: projectpic,
+            demo: '#link',
+            code: '#link',
+        },
+        
+        
+    ];
+    
     return (
       <>
-            
+        <section className='projects'>
+            <hr />
+            <h2>Projects</h2>
+            <div className='projectSection'>
+                <div>
+                <div class="custom-checkbox">
+                    <input id="status" 
+                            type="checkbox" 
+                            name="status" />
+                    <label for="status">
+                        <div class="status-switch"
+                            data-unchecked="Web Development"
+                            data-checked="UI/UX">
+                        </div>
+                    </label>
+                    </div>
+                </div>
+
+                <div className='projectContainer'>
+                    {projectCard.map((el) => 
+                        <div className='projectEntry'>
+                            <div className='projectPicture profile'>
+                                <img src={el.img} alt='project screenshot'></img>
+                            </div>
+
+                             <div className='projectDetails'>
+                                <h2>{el.title}</h2>
+                                <p>{el.desc}</p>
+                                <div className='badgeContainer'>
+                                    {el.badge.map((badge,indx) => 
+                                        <div className='badge' key={indx}>{badge}</div>
+                                    )}
+                                </div>
+
+                                <div className="projectBtn">
+                                    <a href="#demo"><button>Demo</button></a>
+                                    <a href="#code"><button>Code</button></a>
+                                </div>
+                             </div>
+
+                        </div>
+                    )}
+
+                </div>
+            </div>
+        </section>
       </>
     )
 }
