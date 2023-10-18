@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Navbar } from './components/Navbar';
-import { HeroBanner, About, Skills, Projects, Contact } from './components/page';
+import { HeroBanner, About, Skills, Projects, Contact, Footer } from './components/page';
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Contact />   
+      <Contact />  
+      <Footer /> 
    </>
 
   );

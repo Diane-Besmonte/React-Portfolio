@@ -11,6 +11,10 @@ import mongodb from "../assets/images/mongodb.svg"
 import github from "../assets/images/github.svg"
 import vscode from "../assets/images/vs-code.svg"
 import projectpic from "../assets/images/Project Picture.png"
+import linkedin from "../assets/images/linkedin.svg"
+import github2 from "../assets/images/github-2.svg"
+import codepen from "../assets/images/codepen.svg"
+import email from "../assets/images/email.svg"
 
 const HeroBanner = () => {
   return (
@@ -198,9 +202,94 @@ const Projects = () => {
 const Contact = () => {
     return (
       <>
-            
+        <section className='contact'>
+            <hr />
+            <h2>Contact</h2>
+
+            <div className='contactContainer'>
+                <div className='contactContent'>
+                    <h3>Let's Connect!</h3>
+                    <div className='connect'>
+                        <p>Email Address: <a href="mailto:emailaddress@domain.com">emailaddress@domain.com</a></p>
+                        <p>Contact Number: <a href="tel:+639123456789">+639123456789</a></p>
+                    </div>
+                    <div className='socialMedia'>
+                        <a href='#linkedin' className='icons'>
+                            <img src={linkedin} alt='linkedin logo'></img>
+                        </a>
+                        <a href='#github' className='icons'>
+                            <img src={github2} alt='github logo'></img>
+                        </a>
+                        <a href='#icons' className='icons'>
+                            <img src={codepen} alt='codepen logo'></img>
+                        </a>
+                        <a href='mailto:emailaddress@domain.com' className='icons'>
+                            <img src={email} alt='email logo'></img>
+                        </a>
+                    </div>
+                </div>
+
+                <div className='contactContent'>
+                    <h3>Get in touch with me!</h3>
+                    
+                    <form>
+                        <div className='firstRow'>
+                            <div className='form sameRow'>
+                                <label>Name</label>
+                                <input
+                                type="text"
+                                name="name"
+                                placeholder='Full Name'
+                                />
+                            </div>
+                            <div className='form sameRow'>
+                                <label>Email</label>
+                                <input
+                                type="email"
+                                name="email"
+                                placeholder='Email Address'
+                                />
+                            </div>                     
+                        </div>
+
+                        <div className='form fullRow'>
+                                <label>Subject</label>
+                                <input
+                                type="text"
+                                name="subject"
+                                placeholder='Subject'
+                                />
+                        </div>   
+
+                        <div className='form fullRow'>
+                                <label>Message</label>
+                                <textarea id="message" name="message" rows="10" cols="92" placeholder='Message'></textarea>
+                        </div>   
+
+                        <div className='submit'>
+                            <a href="#submit"><button type="submit">Submit</button></a>
+                        </div>
+                        </form>
+                </div>
+            </div>
+
+        </section>
       </>
     )
 }
 
-export {HeroBanner, About, Skills, Projects, Contact};
+const Footer = () => {
+    return (
+      <>
+        <section className='footer'>
+            <p>© 2023 Diane Besmonte All Rights Reserved.</p>
+        </section>
+   
+      </>
+    )
+}
+
+
+
+
+export {HeroBanner, About, Skills, Projects, Contact, Footer};
