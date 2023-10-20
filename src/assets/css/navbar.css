@@ -41,6 +41,7 @@ li a {
     text-decoration: none;
     color: var(--white);
     font-size: 25px;
+    font-family: 'Mukta', sans-serif;
 }
 
 li a:hover {

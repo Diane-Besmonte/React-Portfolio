@@ -47,11 +47,9 @@ const About = () => {
                 </div>
             </div>
         </section>
-   
       </>
     )
 }
-
 
 const Skills = () => {
     const tools = [
@@ -142,9 +140,7 @@ const Projects = () => {
             img: projectpic,
             demo: '#link',
             code: '#link',
-        },
-        
-        
+        },    
     ];
     
     return (
@@ -191,7 +187,6 @@ const Projects = () => {
 
                         </div>
                     )}
-
                 </div>
             </div>
         </section>
@@ -288,8 +283,5 @@ const Footer = () => {
       </>
     )
 }
-
-
-
 
 export {HeroBanner, About, Skills, Projects, Contact, Footer};

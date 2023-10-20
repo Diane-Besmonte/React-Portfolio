@@ -1,329 +1,355 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary: #0F0028;
-    --secondary: #1A0D45;
-    --tertiary: #05A3CC;
-    --white: #F9F9F9;
+  --primary: #0F0028;
+  --secondary: #1A0D45;
+  --tertiary: #05A3CC;
+  --white: #F9F9F9;
 }
 
-.hero {
-    width: 100%;
-    margin: 70px auto;
-    padding: 20px 0px;
-    text-align: center;
-}
-
-.hero > * {
-    width: 100%;
-    padding: 30px 0px;
-}
-
-.hero p {
-    font-weight: 600;
-}
-
-p, h1 {
-    color: var(--white);
-}
-
+/* Typography */
 h1 {
-    font-size: 99px;
+  font-size: 99px;
+}
+
+h1, 
+h2, 
+h3,
+.techCard p {
+  font-family: 'Titillium Web', sans-serif;
 }
 
 p {
-    font-size: 30px;
+  font-size: 18px;
+  font-family: 'Mukta', sans-serif;
+}
+
+button,
+a,
+.badge {
+  font-family: 'Mukta', sans-serif;
+}
+
+p,
+h1 {
+  color: var(--white);
 }
 
 span {
-    color: var(--tertiary);
+  color: var(--tertiary);
+}
+
+hr {
+  width: 300px;
+  border: 1px solid var(--tertiary);
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  margin: 70px auto;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.hero>* {
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.hero p {
+  font-weight: 600;
+  font-size: 30px;
 }
 
 button {
-    padding: 16px 64px;
-    background-color: transparent;
-    border: solid var(--tertiary);
-    border-width: 2px 0px 2px 0px;
-    font-size: 20px;
-    margin: 0 20px;
-    cursor: pointer;
-    color: var(--white);
+  padding: 16px 64px;
+  background-color: transparent;
+  border: solid var(--tertiary);
+  border-width: 2px 0px 2px 0px;
+  font-size: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+  color: var(--white);
 }
 
 button a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button:hover {
-    padding: 16px 64px;
-    background-color: var(--tertiary);
-    color: var(--white);
-    border: solid var(--tertiary);
-    border-width: 2px 0px 2px 0px;
+  padding: 16px 64px;
+  background-color: var(--tertiary);
+  color: var(--white);
+  border: solid var(--tertiary);
+  border-width: 2px 0px 2px 0px;
 }
 
 .cta {
-    display: flex;
-    justify-content: center;
-}
-
-
-hr {
-    width: 300px;
-    border: 1px solid var(--tertiary);
-    text-align: center;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
-    color: var(--white);
-    font-size: 46px;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 20px;
+  color: var(--white);
+  font-size: 46px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* About */
 
 .about,
 .contact {
-    width: 100%;
-    margin: 70px auto;
-    padding: 20px 0px;
-    text-align: center;
+  width: 100%;
+  margin: 70px auto;
+  padding: 20px 0px;
+  text-align: center;
 }
-
 
 .aboutContent {
-    display: flex;
-    width: 100%;
-    margin: 70px auto;
-    padding: 0px 70px;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  margin: 70px auto;
+  padding: 0px 70px;
+  justify-content: space-between;
 }
+
 .aboutContent p,
 .projects p,
 .contact p,
 .footer p {
-    font-size: 18px;
-    text-align: left;
+  text-align: left;
 
 }
 
 .introduction {
-    width: 50%;
+  width: 50%;
 }
 
 .profile {
-    display: inline-block;
-    position: relative;
-    margin-right: 25px;
-  }
-  
-  .profile::before {
-    position: absolute;
-    bottom: -5%;
-    right: -5%;
-    width: 100%;
-    height: 100%;
-    border: 4px solid var(--tertiary);
-    content: '';
-    z-index: -1;
-  }
+  display: inline-block;
+  position: relative;
+  margin-right: 25px;
+}
 
-  /* Skills */
+.profile::before {
+  position: absolute;
+  bottom: -5%;
+  right: -5%;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--tertiary);
+  content: '';
+  z-index: -1;
+}
+
+/* Skills */
 
 .techLogos {
-    display: flex;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 70px;
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 70px;
 }
 
 .techCard {
-    background-color: var(--secondary);
-    border-radius: 15px;
-    text-align: center;
-    width: 18%;
-    max-width: 300px;
-    min-width: 170px;
-    /* margin-bottom: 1rem; */
-    margin: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
+  background-color: var(--secondary);
+  border-radius: 15px;
+  text-align: center;
+  width: 18%;
+  max-width: 300px;
+  min-width: 170px;
+  margin: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 /* Projects */
 
 .custom-checkbox {
-    width: 50%;
-    height: 80px;
-    font-size: 1rem;
-    margin: 30px auto;
-  }
-  .custom-checkbox input#status {
-    display: none;
-  }
-  .custom-checkbox input#status + label {
-    height: 100%;
-    width: 100%;
-  }
-  .custom-checkbox input#status + label > .status-switch {
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: var(--secondary);
-    color: var(--tertiary);
-    transition: all 0.5s ease;
-    padding: 3px;
-    border-radius: 10px;
-  }
-  .custom-checkbox input#status + label > .status-switch:before, .custom-checkbox input#status + label > .status-switch:after {
-    border-radius: 10px;
-    height: calc(100% - 6px);
-    width: calc(50% - 3px);
-    display: flex;
-    align-items: center;
-    position: absolute;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  .custom-checkbox input#status + label > .status-switch:before {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
-    left: 3px;
-    z-index: 10;
-    content: attr(data-unchecked);
-  }
-  .custom-checkbox input#status + label > .status-switch:after {
-    right: 0;
-    content: attr(data-checked);
-  }
-  .custom-checkbox input#status:checked + label > .status-switch {
-    background-color: var(--secondary);
-  }
-  .custom-checkbox input#status:checked + label > .status-switch:after {
-    left: 0;
-    content: attr(data-unchecked);
-  }
-  .custom-checkbox input#status:checked + label > .status-switch:before {
-    color: var(--secondary);
-    left: 50%;
-    content: attr(data-checked);
-  }
+  width: 50%;
+  height: 80px;
+  font-size: 1rem;
+  margin: 30px auto;
+}
+
+.custom-checkbox input#status {
+  display: none;
+}
+
+.custom-checkbox input#status+label {
+  height: 100%;
+  width: 100%;
+}
+
+.custom-checkbox input#status+label>.status-switch {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  transition: all 0.5s ease;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.custom-checkbox input#status+label>.status-switch:before,
+.custom-checkbox input#status+label>.status-switch:after {
+  border-radius: 10px;
+  height: calc(100% - 6px);
+  width: calc(50% - 3px);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox input#status+label>.status-switch:before {
+  background-color: var(--tertiary);
+  color: var(--secondary);
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+  left: 3px;
+  z-index: 10;
+  content: attr(data-unchecked);
+}
+
+.custom-checkbox input#status+label>.status-switch:after {
+  right: 0;
+  content: attr(data-checked);
+}
+
+.custom-checkbox input#status:checked+label>.status-switch {
+  background-color: var(--secondary);
+}
+
+.custom-checkbox input#status:checked+label>.status-switch:after {
+  left: 0;
+  content: attr(data-unchecked);
+}
+
+.custom-checkbox input#status:checked+label>.status-switch:before {
+  color: var(--secondary);
+  left: 50%;
+  content: attr(data-checked);
+}
 
 .projectEntry {
-    display: flex;
-    margin: 100px 0px;
+  display: flex;
+  margin: 100px 0px;
 }
 
 .projectDetails h2,
 .projectDetails p {
-    text-align: left;
+  text-align: left;
 }
 
 .projectDetails {
-    padding: 20px 40px;
+  padding: 20px 40px;
 }
 
 .projectContainer {
-    width: 100%;
-    margin: 70px auto;
-    padding: 0px 70px;
+  width: 100%;
+  margin: 70px auto;
+  padding: 0px 70px;
 }
 
-  .badge {
-    color: var(--tertiary);
-    padding: 5px 25px;
-    background-color: var(--secondary);
-    margin: 10px;
-    width: 100%;
-    min-width: 110px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
+.badge {
+  color: var(--tertiary);
+  padding: 5px 25px;
+  background-color: var(--secondary);
+  margin: 10px;
+  width: 100%;
+  min-width: 110px;
+  border-radius: 5px;
+  font-size: 14px;
+}
 
-  .badgeContainer {
-    text-align: center;
-    width: 150px;
-    display: flex;
+.badgeContainer {
+  text-align: center;
+  width: 150px;
+  display: flex;
 
-  }
+}
 
-  .projectBtn {
-    text-align: center;
-  }
+.projectBtn {
+  text-align: center;
+}
 
-  .projectBtn button {
-    padding: 15px 60px;
-    font-size: 18px;
-    margin: 20px;
-    color: var(--white);
-  }
+.projectBtn button {
+  padding: 15px 60px;
+  font-size: 18px;
+  margin: 20px;
+  color: var(--white);
+}
 
-  /* Contact */
+/* Contact */
 
-  .contactContainer {
-    display: flex;
-    width: 100%;
-    margin: 70px auto;
-    padding: 0px 70px;
-    justify-content: space-between;
-  }
+.contactContainer {
+  display: flex;
+  width: 100%;
+  margin: 70px auto;
+  padding: 0px 70px;
+  justify-content: space-between;
+}
 
-  .contactContent {
-    width: 50%;
-  }
-  .contact a {
-    text-decoration: none;
-    color: var(--white);
-  }
+.contactContent {
+  width: 50%;
+}
 
-  .contact a:hover {
-    text-decoration: none;
-    color: var(--tertiary);
-  }
+.contact a {
+  text-decoration: none;
+  color: var(--white);
+}
 
-  .socialMedia {
-    display: flex;
-  }
+.contact a:hover {
+  text-decoration: none;
+  color: var(--tertiary);
+}
 
-  .icons {
-    border-radius:50%;
-    background-color: var(--secondary);
-    padding: 15px;
-    margin: 20px;
-  }
+.socialMedia {
+  display: flex;
+}
 
-  .icons:hover {   
-    background-color: var(--tertiary);
-    cursor: pointer;
-  }
+.icons {
+  border-radius: 50%;
+  background-color: var(--secondary);
+  padding: 15px;
+  margin: 20px;
+}
 
-  .connect p {
-    padding: 15px 0px;
-  }
+.icons:hover {
+  background-color: var(--tertiary);
+  cursor: pointer;
+}
 
-  .contactContent h3 {
-    text-align: center;
-    font-size: 40px;
-    color: var(--white);
-    padding: 25px 0px;
-  }
+.connect p {
+  padding: 15px 0px;
+}
+
+.contactContent h3 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--white);
+  padding: 25px 0px;
+}
 
 label {
-    display: block;
-    text-align: left;
-    color: var(--white);
-    margin: 15px 0px;
+  display: block;
+  text-align: left;
+  color: var(--white);
+  margin: 15px 0px;
 }
 
 input[type=text],
@@ -371,6 +397,7 @@ textarea {
   border-top: 1px solid var(--white);
   padding: 20px 0px;
 }
+
 .footer p {
   text-align: center;
   font-size: 14px;
