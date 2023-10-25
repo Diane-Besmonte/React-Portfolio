@@ -227,7 +227,7 @@ const Contact = () => {
                 <div className='contactContent'>
                     <h3>Get in touch with me!</h3>
                     
-                    <form>
+                    <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST">
                         <div className='firstRow'>
                             <div className='form sameRow'>
                                 <label>Name</label>
