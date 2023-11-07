@@ -1,11 +1,12 @@
-import "../assets/css/navbar.css"
-import logo from "../assets/images/logo.svg"
+import "../assets/css/navbar.css";
+import logo from "../assets/images/logo.svg";
 
 const Navbar = () => {
+
   return (
     <>
         <div className='navContainer'>
-            <a href="#"><img src={logo} alt='portfolio logo'></img></a>
+            <a href="/"><img src={logo} alt='portfolio logo'></img></a>
             <div className='mainMenu'>
                 <ul className='menu'>
                     <li><a href="#about">About</a></li>

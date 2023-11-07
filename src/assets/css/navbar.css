@@ -23,6 +23,10 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: sticky;
+    top: 0px;
+    background: var(--primary);
+    z-index: 20;
 }
 
 .menu {
