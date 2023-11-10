@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,10 +10,10 @@
   --secondary: #1A0D45;
   --tertiary: #05A3CC;
   --white: #F9F9F9;
-}
+} */
 
 /* Typography */
-h1 {
+/* h1 {
   font-size: 99px;
 }
 
@@ -42,34 +42,34 @@ h1 {
 
 span {
   color: var(--tertiary);
-}
+} */
 
-hr {
+/* hr {
   width: 300px;
   border: 1px solid var(--tertiary);
   text-align: center;
   margin: 170px auto 0 auto;
-}
+} */
 
 /* Hero Section */
-.hero {
+/* .hero {
   width: 100%;
   margin: 70px auto;
   padding: 20px 0px;
   text-align: center;
-}
+} */
 
-.hero>* {
+/* .hero>* {
   width: 100%;
   padding: 30px 0px;
-}
+} */
 
-.hero p {
+/* .hero p {
   font-weight: 600;
   font-size: 30px;
-}
+} */
 
-button {
+/* button {
   padding: 16px 64px;
   background-color: transparent;
   border: solid var(--tertiary);
@@ -90,7 +90,7 @@ button:hover {
   color: var(--white);
   border: solid var(--tertiary);
   border-width: 2px 0px 2px 0px;
-}
+} */
 
 .cta {
   display: flex;
@@ -123,13 +123,13 @@ h2 {
   justify-content: space-between;
 }
 
-.aboutContent p,
+/* .aboutContent p,
 #projects p,
 #contact p,
 .footer p {
   text-align: left;
 
-}
+} */
 
 .introduction {
   width: 50%;
@@ -397,7 +397,7 @@ textarea {
 
 /* Footer */
 
-.footer {
+/* .footer {
   border-top: 1px solid var(--white);
   padding: 20px 0px;
 }
@@ -405,4 +405,4 @@ textarea {
 .footer p {
   text-align: center;
   font-size: 14px;
-}
+} */

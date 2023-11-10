@@ -124,7 +124,8 @@ const Homepage = () => {
     
     // For Projects Section
     const [isChecked, setIsChecked] = useState(false);
-
+    
+    // Web Development Cards
     const webDevelopmentContent = (
       <div>
         <div className='projectContainer'>
@@ -155,6 +156,7 @@ const Homepage = () => {
       </div>
     );
   
+    // UI/UX Cards
     const uiUxContent = (
       <div>
             {uiuxProjectCard.map((el) => 
@@ -185,20 +187,21 @@ const Homepage = () => {
 
   return (
     <>
-        <section className='hero'>
-            <p>Hello, I'm<span> Diane</span>!</p>
-            <h1>Web Developer</h1>
-            <p>Building something out of <span>ideas and innovation</span> by transforming it <br /> into a working <span>responsive websites.</span></p>
-            <div className="cta">
-                <a href="#resume"><button>Resume</button></a>
-                <a href="#contact"><button>Contact</button></a>
+        {/* Hero Section */}
+        <section className='w-full my-20 mx-auto md:px-20 px-10 py-0 text-center text-white lg:mt-40 md:mt-32 mt-20'>
+            <p className='xl:text-4xl lg:text-3xl sm:text-2xl text-xl my-5 font-semibold'>Hello, I'm<span className='text-tertiary'> Diane</span>!</p>
+            <h1 className='lg:text-8xl md:text-7xl sm:text-6xl text-6xl my-8 font-bold'>Web Developer</h1>
+            <p className='xl:text-4xl lg:text-3xl sm:text-2xl text-xl font-semibold lg:leading-10'>Building something out of <span className='text-tertiary'>ideas and innovation</span> by transforming it <br /> into a working <span className='text-tertiary'>responsive websites</span>.</p>
+            <div className="flex justify-center md:py-16 py-11">
+                <a href="#resume"><button className='hover:bg-tertiary border-y-2 border-tertiary xl:py-4 md:py-3 sm:py-1 py-2 xl:px-16 md:px-12 sm:px-10 px-10 lg:mx-5 mx-2 text-xl'>Resume</button></a>
+                <a href="#contact"><button className='hover:bg-tertiary border-y-2 border-tertiary xl:py-4 md:py-3 sm:py-1 py-2 xl:px-16 md:px-12 sm:px-10 px-10 lg:mx-5 mx-2 text-xl'>Contact</button></a>
             </div>
         </section>
 
-        {/* ************************************************ */}
-        <section id='about'>
-            <hr />
-            <h2>About</h2>
+        {/* About Section */}
+        <section id='about' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+            <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2'/>
+            <h2 className='text-white lg:text-4xl text-3xl'>About</h2>
             <div className='aboutContent'>
                 <div className='introduction'>
                     <p>I'm an aspiring Web Developer with experience with some tech tools knowledge and currently preparing to have my big break in joining the tech industry, As I work on myself to upskill for my own personal growth, I found myself diving into the world of UI and UX that leads me to take the Google Coursera UX Program. With that, I was able to create my project and this portfolio along with the ton of knowledge I gained and the best practices I learned from the whole program and courses.</p>
@@ -209,9 +212,10 @@ const Homepage = () => {
             </div>
         </section>
 
-        <section id='skills'>
-            <hr />
-            <h2>Skills</h2>
+        {/* Skills Section */}
+        <section id='skills' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+            <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2 mt-40'/>
+            <h2 className='text-white lg:text-4xl text-3xl'>Skills</h2>
             <div className='techLogos'>
                 {tools.map((el) => 
                     <div className='techCard'>
@@ -221,10 +225,11 @@ const Homepage = () => {
                 )}
             </div>
         </section>
-
-        <section id='projects'>
-            <hr />
-            <h2>Projects</h2>
+        
+        {/* Projects Section */}
+        <section id='projects' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+            <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2 mt-40'/>
+            <h2 className='text-white lg:text-4xl text-3xl'>Projects</h2>
             <div className='projectSection'>
                 <div>
                 <div class="custom-checkbox">
@@ -245,40 +250,13 @@ const Homepage = () => {
                 <div className='projectsContent'>
                     {isChecked ? webDevelopmentContent : uiUxContent}
                 </div>
-
-                
-                {/* <div className='projectContainer'>
-                    {projectCard.map((el) => 
-                        <div className='projectEntry'>
-                            <div className='projectPicture profile'>
-                                <img src={el.img} alt='project screenshot'></img>
-                            </div>
-
-                             <div className='projectDetails'>
-                                <h2>{el.title}</h2>
-                                <p>{el.desc}</p>
-                                <div className='badgeContainer'>
-                                    {el.badge.map((badge,indx) => 
-                                        <div className='badge' key={indx}>{badge}</div>
-                                    )}
-                                </div>
-
-                                <div className="projectBtn">
-                                    <a href="#demo"><button>Demo</button></a>
-                                    <a href="#code"><button>Code</button></a>
-                                </div>
-                             </div>
-
-                        </div>
-                    )}
-                </div> */}
             </div>
         </section>
 
-
-        <section id='contact'>
-            <hr />
-            <h2>Contact</h2>
+        {/* Contact Section */}
+        <section id='contact' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+            <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2 mt-40'/>
+            <h2 className='text-white lg:text-4xl text-3xl'>Contact</h2>
 
             <div className='contactContainer'>
                 <div className='contactContent'>
@@ -349,8 +327,8 @@ const Homepage = () => {
 
         </section>
 
-        <section className='footer'>
-            <p>© 2023 Diane Besmonte All Rights Reserved.</p>
+        <section className='footer text-white border-t-2 border-white py-5'>
+            <p className='text-center md:text-sm text-xs'>© 2023 Diane Besmonte All Rights Reserved.</p>
         </section>
         {/* ************************************************ */}
     </>
