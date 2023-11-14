@@ -188,48 +188,50 @@ const Homepage = () => {
   return (
     <>
         {/* Hero Section */}
-        <section className='w-full my-20 mx-auto md:px-20 px-10 py-0 text-center text-white lg:mt-40 md:mt-32 mt-20'>
+        <section className='container mx-auto w-full xl:px-20 lg:px-20 md:px-20 px-10 py-0 text-center text-white my-20'>
             <p className='xl:text-4xl lg:text-3xl sm:text-2xl text-xl my-5 font-semibold'>Hello, I'm<span className='text-tertiary'> Diane</span>!</p>
             <h1 className='lg:text-8xl md:text-7xl sm:text-6xl text-6xl my-8 font-bold'>Web Developer</h1>
-            <p className='xl:text-4xl lg:text-3xl sm:text-2xl text-xl font-semibold lg:leading-10'>Building something out of <span className='text-tertiary'>ideas and innovation</span> by transforming it <br /> into a working <span className='text-tertiary'>responsive websites</span>.</p>
-            <div className="flex justify-center md:py-16 py-11">
-                <a href="#resume"><button className='hover:bg-tertiary border-y-2 border-tertiary xl:py-4 md:py-3 sm:py-1 py-2 xl:px-16 md:px-12 sm:px-10 px-10 lg:mx-5 mx-2 text-xl'>Resume</button></a>
-                <a href="#contact"><button className='hover:bg-tertiary border-y-2 border-tertiary xl:py-4 md:py-3 sm:py-1 py-2 xl:px-16 md:px-12 sm:px-10 px-10 lg:mx-5 mx-2 text-xl'>Contact</button></a>
+            <p className='xl:text-4xl lg:text-3xl sm:text-2xl text-xl font-normal lg:leading-10'>Building something out of <span className='text-tertiary'>ideas and innovation</span> by transforming it <br /> into a working <span className='text-tertiary'>responsive websites</span>.</p>
+            <div className="flex justify-center md:pt-16 pt-11 pb-11">
+                <a href="#resume"><button className='hover:bg-tertiary border-y-2 border-tertiary xl:py-4 md:py-3 sm:py-1 py-2 xl:px-16 md:px-12 sm:px-10 px-10 lg:mx-5 mx-2 md:text-xl text-l'>Resume</button></a>
+                <a href="#contact"><button className='hover:bg-tertiary border-y-2 border-tertiary xl:py-4 md:py-3 sm:py-1 py-2 xl:px-16 md:px-12 sm:px-10 px-10 lg:mx-5 mx-2 md:text-xl text-l'>Contact</button></a>
             </div>
         </section>
 
         {/* About Section */}
-        <section id='about' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+        <section id='about' class='container mx-auto w-full xl:px-20 lg:px-20 md:px-20 px-10 py-0 my-20'> 
             <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2'/>
-            <h2 className='text-white lg:text-4xl text-3xl'>About</h2>
-            <div className='aboutContent'>
-                <div className='introduction'>
-                    <p>I'm an aspiring Web Developer with experience with some tech tools knowledge and currently preparing to have my big break in joining the tech industry, As I work on myself to upskill for my own personal growth, I found myself diving into the world of UI and UX that leads me to take the Google Coursera UX Program. With that, I was able to create my project and this portfolio along with the ton of knowledge I gained and the best practices I learned from the whole program and courses.</p>
+            <h2 className='text-white lg:text-4xl text-3xl text-center mt-5 font-semibold'>About</h2>
+            <div className='flex flex-col md:flex-row w-full mt-16 mx-auto justify-between'>
+                <div className='w-full md:w-1/2 order-2 md:order-1'>
+                    <p className='text-justify text-white'>I'm passionate about becoming a Web Developer and have some know-how about tech tools. Right now, I'm gearing up to step into the tech world. I'm constantly learning and improving myself. Lately, I've been exploring UI and UX—how things look and feel for users. I took a course from Google Coursera on UX, which was a game-changer. It helped me create this portfolio and taught me a lot of great stuff about how to do things right.</p>
+                    <br />
+                    <p className='text-justify text-white'>Beyond UI and UX, I'm on a continual journey to enhance my developer skills. I'm diving deeper into coding languages, refining my understanding of programming concepts, and experimenting with different development frameworks. It's an ongoing process where I'm always looking for new challenges and projects to further improve my abilities. The tech world is vast and always evolving, so I'm committed to staying curious and learning more every day. This drive to keep growing is what fuels my passion for this field.</p>
                 </div>
-                <div className='profile'>
-                    <img src={profile} alt='profile vector artwork'></img>
+                <div className='w-full md:w-1/3 order-1 md:order-2'>
+                    <img className='mx-auto w-10/12 md:w-full pb-10 md:mx-0 md:pb-0 text-center drop-shadow-lg' src={profile} alt='profile vector artwork'></img>
                 </div>
             </div>
         </section>
 
         {/* Skills Section */}
-        <section id='skills' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+        <section id='skills' class='container mx-auto w-full xl:px-20 lg:px-20 md:px-20 px-10 py-0 my-20'>
             <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2 mt-40'/>
-            <h2 className='text-white lg:text-4xl text-3xl'>Skills</h2>
-            <div className='techLogos'>
+            <h2 className='text-white lg:text-4xl text-3xl text-center mt-5 font-semibold'>Skills</h2>
+            <div className='flex w-full flex-wrap justify-center px-10'>
                 {tools.map((el) => 
-                    <div className='techCard'>
-                        <img src={el.img} alt='logo'></img>
-                        <p>{el.title}</p>
+                    <div className='bg-secondary rounded-2xl text-center w-1/6 max-w-xs min-w-max m-4 p-4 box-border'>
+                        <img className='mx-auto w-6/12' src={el.img} alt='logo'></img>
+                        <p className='text-sm md:text-base xl:text-lg text-tertiary py-2'>{el.title}</p>
                     </div>
                 )}
             </div>
         </section>
         
         {/* Projects Section */}
-        <section id='projects' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+        <section id='projects' class='container mx-auto w-full xl:px-20 lg:px-20 md:px-20 px-10 py-0 my-20'>
             <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2 mt-40'/>
-            <h2 className='text-white lg:text-4xl text-3xl'>Projects</h2>
+            <h2 className='text-white lg:text-4xl text-3xl text-center mt-5 font-semibold'>Projects</h2>
             <div className='projectSection'>
                 <div>
                 <div class="custom-checkbox">
@@ -254,40 +256,40 @@ const Homepage = () => {
         </section>
 
         {/* Contact Section */}
-        <section id='contact' class='xl:mt-44 lg:mt-40 md:mt-32 mt-20'>
+        <section id='contact' class='container mx-auto w-full xl:px-20 lg:px-20 md:px-20 px-10 py-0 my-20'>
             <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2 mt-40'/>
-            <h2 className='text-white lg:text-4xl text-3xl'>Contact</h2>
+            <h2 className='text-white lg:text-4xl text-3xl text-center mt-5 font-semibold'>Contact</h2>
 
-            <div className='contactContainer'>
-                <div className='contactContent'>
-                    <h3>Let's Connect!</h3>
-                    <div className='connect'>
-                        <p>Email Address: <a href="mailto:dianecoding@gmail.com">dianecoding@gmail.com</a></p>
-                        <p>Contact Number: <a href="tel:+639123456789">+639123456789</a></p>
+            <div className='flex flex-col lg:flex-row w-full justify-between my-16 px-16'>
+                <div className='w-full lg:w-6/12'>
+                    <h3 className='text-tertiary lg:text-4xl text-3xl text-center m-5'>Let's Connect!</h3>
+                    <div className='w-full'>
+                        <p className='text-white text-center lg:text-left text-base md:text-lg lg:text-lg xl:text-lg py-2'>Email Address: <a className='no-underline text-white hover:bg-tertiary' href="mailto:dianecoding@gmail.com">dianecoding@gmail.com</a></p>
+                        <p className='text-white text-center lg:text-left text-lg md:text-lg lg:text-lg xl:text-lg py-2'>Contact Number: <a className='no-underline text-white hover:bg-tertiary' href="tel:+639123456789">+639123456789</a></p>
                     </div>
-                    <div className='socialMedia'>
-                        <a href='https://www.linkedin.com/in/diane-besmonte' className='icons' target='_blank' rel="noopener noreferrer">
+                    <div className='flex'>
+                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='https://www.linkedin.com/in/diane-besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={linkedin} alt='linkedin logo'></img>
                         </a>
-                        <a href='https://github.com/Diane-Besmonte' className='icons' target='_blank' rel="noopener noreferrer">
+                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='https://github.com/Diane-Besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={github2} alt='github logo'></img>
                         </a>
-                        <a href='https://codepen.io/diane-besmonte' className='icons' target='_blank' rel="noopener noreferrer">
+                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='https://codepen.io/diane-besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={codepen} alt='codepen logo'></img>
                         </a>
-                        <a href='mailto:dianecoding@gmail.com' className='icons'>
+                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='mailto:dianecoding@gmail.com'>
                             <img src={email} alt='email logo'></img>
                         </a>
                     </div>
                 </div>
 
-                <div className='contactContent'>
-                    <h3>Get in touch with me!</h3>
+                <div className='w-full lg:w-6/12'>
+                    <h3 className='text-tertiary lg:text-4xl text-3xl text-center m-5'>Get in touch with me!</h3>
                     
                     <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST">
                         <div className='firstRow'>
                             <div className='form sameRow'>
-                                <label>Name</label>
+                                <label className='text-white text-left block my-4'>Name</label>
                                 <input
                                 type="text"
                                 name="name"
@@ -295,7 +297,7 @@ const Homepage = () => {
                                 />
                             </div>
                             <div className='form sameRow'>
-                                <label>Email</label>
+                                <label className='text-white text-left block my-4'>Email</label>
                                 <input
                                 type="email"
                                 name="email"
@@ -305,7 +307,7 @@ const Homepage = () => {
                         </div>
 
                         <div className='form fullRow'>
-                                <label>Subject</label>
+                                <label className='text-white text-left block my-4'>Subject</label>
                                 <input
                                 type="text"
                                 name="subject"
@@ -314,7 +316,7 @@ const Homepage = () => {
                         </div>   
 
                         <div className='form fullRow'>
-                                <label>Message</label>
+                                <label className='text-white text-left block my-4'>Message</label>
                                 <textarea id="message" name="message" rows="10" cols="92" placeholder='Message'></textarea>
                         </div>   
 
