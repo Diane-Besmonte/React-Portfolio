@@ -127,62 +127,65 @@ const Homepage = () => {
     
     // Web Development Cards
     const webDevelopmentContent = (
-      <div>
-        <div className='projectContainer'>
+      <>
+        <div className='w-full mx-auto container'>
             {webProjectCard.map((el) => 
-                <div className='projectEntry'>
-                    <div className='projectPicture profile'>
+                <div className='flex flex-col lg:flex-row my-24 w-full items-center lg:items-start'>
+                    <div className='projectPicture profile order-1'>
                         <img src={el.img} alt='project screenshot'></img>
                     </div>
 
-                        <div className='projectDetails'>
-                            <h2>{el.title}</h2>
-                            <p>{el.desc}</p>
-                            <div className='badgeContainer'>
-                                {el.badge.map((badge,indx) => 
-                                    <div className='badge' key={indx}>{badge}</div>
-                                )}
-                            </div>
-
-                            <div className="projectBtn">
-                                <a href={el.project} target='_blank' rel="noopener noreferrer"><button>Demo</button></a>
-                                <a href={el.demo} target='_blank' rel="noopener noreferrer"><button>Code</button></a>
-                            </div>
+                    <div className='py-5 px-10 order-2 w-full lg:w-1/2'>
+                        <h2 className='text-left text-tertiary md:text-4xl text-2xl py-3'>{el.title}</h2>
+                        <p className='text-left text-white text-base lg:text-xl xl:text-2xl font-light'>{el.desc}</p>
+                        <div className='text-center w-36 flex'>
+                            {el.badge.map((badge,indx) => 
+                                <div className='text-tertiary py-1.5 px-6 bg-secondary m-2.5 w-full min-w-min rounded text-xs' key={indx}>{badge}</div>
+                            )}
                         </div>
+
+                        <div className="text-center flex w-full justify-center">
+                            <a className='text-white' href={el.project} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Demo</button></a>
+                            <a className='text-white' href={el.demo} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Code</button></a>
+                        </div>
+                    </div>
 
                 </div>
             )}
         </div>
-      </div>
+      </>
     );
   
     // UI/UX Cards
     const uiUxContent = (
-      <div>
+      <>
+      <div className='w-full mx-auto container'>
             {uiuxProjectCard.map((el) => 
-                <div className='projectEntry'>
-                    <div className='projectPicture profile'>
+                <div className='flex flex-col lg:flex-row my-24 w-full items-center lg:items-start'>
+                    <div className='projectPicture profile w-1/2 order-1'>
                         <img src={el.img} alt='project screenshot'></img>
                     </div>
 
-                        <div className='projectDetails'>
-                            <h2>{el.title}</h2>
-                            <p>{el.desc}</p>
-                            <div className='badgeContainer'>
+                        <div className='py-5 px-10 order-2 w-full lg:w-1/2'>
+                            <h2 className='text-left text-tertiary md:text-4xl text-2xl py-3'>{el.title}</h2>
+                            <p className='text-left text-white lg:text-xl xl:text-2xl font-light'>{el.desc}</p>
+                            <div className='text-center w-36 flex'>
                                 {el.badge.map((badge,indx) => 
-                                    <div className='badge' key={indx}>{badge}</div>
+                                    <div className='text-tertiary py-1.5 px-6 bg-secondary m-2.5 w-full min-w-min rounded text-xs' key={indx}>{badge}</div>
                                 )}
                             </div>
 
-                            <div className="projectBtn">
-                                <a href={el.project} target='_blank' rel="noopener noreferrer"><button>Project</button></a>
-                                <a href={el.demo} target='_blank' rel="noopener noreferrer"><button>Demo</button></a>
+                            <div className="text-center flex w-full justify-center">
+                                <a className='text-white' href={el.project} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Project</button></a>
+                                <a className='text-white' href={el.demo} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Demo</button></a>
                             </div>
                         </div>
 
                 </div>
             )}
       </div>
+
+      </>
     );
 
   return (
@@ -204,9 +207,9 @@ const Homepage = () => {
             <h2 className='text-white lg:text-4xl text-3xl text-center mt-5 font-semibold'>About</h2>
             <div className='flex flex-col md:flex-row w-full mt-16 mx-auto justify-between'>
                 <div className='w-full md:w-1/2 order-2 md:order-1'>
-                    <p className='text-justify text-white'>I'm passionate about becoming a Web Developer and have some know-how about tech tools. Right now, I'm gearing up to step into the tech world. I'm constantly learning and improving myself. Lately, I've been exploring UI and UX—how things look and feel for users. I took a course from Google Coursera on UX, which was a game-changer. It helped me create this portfolio and taught me a lot of great stuff about how to do things right.</p>
+                    <p className='text-left text-white'>I'm passionate about becoming a Web Developer and have some know-how about tech tools. Right now, I'm gearing up to step into the tech world. I'm constantly learning and improving myself. Lately, I've been exploring UI and UX—how things look and feel for users. I took a course from Google Coursera on UX, which was a game-changer. It helped me create this portfolio and taught me a lot of great stuff about how to do things right.</p>
                     <br />
-                    <p className='text-justify text-white'>Beyond UI and UX, I'm on a continual journey to enhance my developer skills. I'm diving deeper into coding languages, refining my understanding of programming concepts, and experimenting with different development frameworks. It's an ongoing process where I'm always looking for new challenges and projects to further improve my abilities. The tech world is vast and always evolving, so I'm committed to staying curious and learning more every day. This drive to keep growing is what fuels my passion for this field.</p>
+                    <p className='text-left text-white'>Beyond UI and UX, I'm on a continual journey to enhance my developer skills. I'm diving deeper into coding languages, refining my understanding of programming concepts, and experimenting with different development frameworks. It's an ongoing process where I'm always looking for new challenges and projects to further improve my abilities. The tech world is vast and always evolving, so I'm committed to staying curious and learning more every day. This drive to keep growing is what fuels my passion for this field.</p>
                 </div>
                 <div className='w-full md:w-1/3 order-1 md:order-2'>
                     <img className='mx-auto w-10/12 md:w-full pb-10 md:mx-0 md:pb-0 text-center drop-shadow-lg' src={profile} alt='profile vector artwork'></img>
@@ -222,7 +225,7 @@ const Homepage = () => {
                 {tools.map((el) => 
                     <div className='bg-secondary rounded-2xl text-center w-1/6 max-w-xs min-w-max m-4 p-4 box-border'>
                         <img className='mx-auto w-6/12' src={el.img} alt='logo'></img>
-                        <p className='text-sm md:text-base xl:text-lg text-tertiary py-2'>{el.title}</p>
+                        <p className='text-sm md:text-base xl:text-lg text-tertiary pt-2'>{el.title}</p>
                     </div>
                 )}
             </div>
@@ -234,18 +237,19 @@ const Homepage = () => {
             <h2 className='text-white lg:text-4xl text-3xl text-center mt-5 font-semibold'>Projects</h2>
             <div className='projectSection'>
                 <div>
-                <div class="custom-checkbox">
-                    <input id="status" 
-                            type="checkbox" 
-                            checked={isChecked}
-                            name="status" 
-                            onChange={() => setIsChecked(!isChecked)}/>
-                    <label for="status">
-                        <div className="statusSwitch"
-                            data-checked="Web Development"
-                            data-unchecked="UI/UX">
-                        </div>
-                    </label>
+                    <div class="custom-checkbox w-1/2 h-20 text-base mx-auto my-7">
+                        <input id="status" 
+                        className='hidden w-full h-full'
+                                type="checkbox" 
+                                checked={isChecked}
+                                name="status" 
+                                onChange={() => setIsChecked(!isChecked)}/>
+                        <label for="status" className='w-full h-full'>
+                            <div className="statusSwitch cursor-pointer w-full h-full relative bg-secondary text-tertiary transition-all duration-500 ease-linear p-1 rounded-xl"
+                                data-checked="Websites"
+                                data-unchecked="UI/UX">
+                            </div>
+                        </label>
                     </div>
                 </div>
 
@@ -260,67 +264,70 @@ const Homepage = () => {
             <hr className='border-tertiary xl:w-64 md:w-52 sm:w-36 w-32 mx-auto border-2 mt-40'/>
             <h2 className='text-white lg:text-4xl text-3xl text-center mt-5 font-semibold'>Contact</h2>
 
-            <div className='flex flex-col lg:flex-row w-full justify-between my-16 px-16'>
+            <div className='flex flex-col lg:flex-row w-full justify-between my-16 px-0'>
                 <div className='w-full lg:w-6/12'>
-                    <h3 className='text-tertiary lg:text-4xl text-3xl text-center m-5'>Let's Connect!</h3>
+                    <h3 className='text-tertiary lg:text-4xl text-2xl text-center m-5'>Let's Connect!</h3>
                     <div className='w-full'>
                         <p className='text-white text-center lg:text-left text-base md:text-lg lg:text-lg xl:text-lg py-2'>Email Address: <a className='no-underline text-white hover:bg-tertiary' href="mailto:dianecoding@gmail.com">dianecoding@gmail.com</a></p>
                         <p className='text-white text-center lg:text-left text-lg md:text-lg lg:text-lg xl:text-lg py-2'>Contact Number: <a className='no-underline text-white hover:bg-tertiary' href="tel:+639123456789">+639123456789</a></p>
                     </div>
-                    <div className='flex'>
-                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='https://www.linkedin.com/in/diane-besmonte' target='_blank' rel="noopener noreferrer">
+                    <div className='flex w-full min-w-fit justify-center'>
+                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='https://www.linkedin.com/in/diane-besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={linkedin} alt='linkedin logo'></img>
                         </a>
-                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='https://github.com/Diane-Besmonte' target='_blank' rel="noopener noreferrer">
+                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='https://github.com/Diane-Besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={github2} alt='github logo'></img>
                         </a>
-                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='https://codepen.io/diane-besmonte' target='_blank' rel="noopener noreferrer">
+                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='https://codepen.io/diane-besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={codepen} alt='codepen logo'></img>
                         </a>
-                        <a className='no-underline rounded-full bg-secondary p-4 m-5 cursor-pointer hover:bg-tertiary' href='mailto:dianecoding@gmail.com'>
+                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='mailto:dianecoding@gmail.com'>
                             <img src={email} alt='email logo'></img>
                         </a>
                     </div>
                 </div>
 
                 <div className='w-full lg:w-6/12'>
-                    <h3 className='text-tertiary lg:text-4xl text-3xl text-center m-5'>Get in touch with me!</h3>
+                    <h3 className='text-tertiary lg:text-4xl text-2xl text-center m-5'>Get in touch with me!</h3>
                     
                     <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST">
-                        <div className='firstRow'>
-                            <div className='form sameRow'>
+                        <div className='flex w-full justify-between '>
+                            <div className='form w-full px-5'>
                                 <label className='text-white text-left block my-4'>Name</label>
                                 <input
                                 type="text"
                                 name="name"
                                 placeholder='Full Name'
+                                className='border-2 border-tertiary bg-secondary text-sm text-white box-border w-full py-3 px-2.5'
                                 />
                             </div>
-                            <div className='form sameRow'>
+                            <div className='form w-full mx-5'>
                                 <label className='text-white text-left block my-4'>Email</label>
                                 <input
                                 type="email"
                                 name="email"
                                 placeholder='Email Address'
+                                className='border-2 border-tertiary bg-secondary text-sm text-white box-border w-full py-3 px-2.5'
                                 />
                             </div>                     
                         </div>
 
-                        <div className='form fullRow'>
+                        <div className='form mx-5 w-11/12'>
                                 <label className='text-white text-left block my-4'>Subject</label>
                                 <input
                                 type="text"
                                 name="subject"
                                 placeholder='Subject'
+                                className='border-2 border-tertiary bg-secondary text-sm text-white box-border w-full py-3 px-2.5'
                                 />
                         </div>   
 
-                        <div className='form fullRow'>
+                        <div className='form mx-5 w-11/12'>
                                 <label className='text-white text-left block my-4'>Message</label>
-                                <textarea id="message" name="message" rows="10" cols="92" placeholder='Message'></textarea>
+                                <textarea id="message" name="message" rows="8" placeholder='Message' className='text-left py-3 px-2.5 border-2 border-tertiary bg-secondary text-sm text-white w-full'></textarea>
                         </div>   
 
-                        <div className='submit'>
+                        <div className='submit my-5'>
                             <a href="#submit"><button type="submit">Submit</button></a>
                         </div>
                         </form>
