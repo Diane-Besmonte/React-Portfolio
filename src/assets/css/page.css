@@ -39,3 +39,9 @@
   left: 50%;
   content: attr(data-checked);
 }
+
+/* Contact */
+
+.sameRow {
+  width: calc(50% - 10px);
+}

@@ -144,9 +144,9 @@ const Homepage = () => {
                             )}
                         </div>
 
-                        <div className="text-center flex w-full justify-center">
-                            <a className='text-white' href={el.project} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Demo</button></a>
-                            <a className='text-white' href={el.demo} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Code</button></a>
+                        <div className="text-center flex w-full justify-center my-5">
+                            <a className='text-white' href={el.project} target='_blank' rel="noopener noreferrer"><button className='xl:py-4 md:py-3 sm:py-1 py-2 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Demo</button></a>
+                            <a className='text-white' href={el.demo} target='_blank' rel="noopener noreferrer"><button className='xl:py-4 md:py-3 sm:py-1 py-2 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Code</button></a>
                         </div>
                     </div>
 
@@ -175,9 +175,9 @@ const Homepage = () => {
                                 )}
                             </div>
 
-                            <div className="text-center flex w-full justify-center">
-                                <a className='text-white' href={el.project} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Project</button></a>
-                                <a className='text-white' href={el.demo} target='_blank' rel="noopener noreferrer"><button className='py-3.5 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Demo</button></a>
+                            <div className="text-center flex w-full justify-center my-5">
+                                <a className='text-white' href={el.project} target='_blank' rel="noopener noreferrer"><button className='xl:py-4 md:py-3 sm:py-1 py-2 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Project</button></a>
+                                <a className='text-white' href={el.demo} target='_blank' rel="noopener noreferrer"><button className='xl:py-4 md:py-3 sm:py-1 py-2 px-8 md:px-12 text-lg m-2 md:m-5 text-white border-y-2 border-x-2 border-l-0 border-r-0 border-tertiary hover:bg-tertiary'>Demo</button></a>
                             </div>
                         </div>
 
@@ -272,16 +272,16 @@ const Homepage = () => {
                         <p className='text-white text-center lg:text-left text-lg md:text-lg lg:text-lg xl:text-lg py-2'>Contact Number: <a className='no-underline text-white hover:bg-tertiary' href="tel:+639123456789">+639123456789</a></p>
                     </div>
                     <div className='flex w-full min-w-fit justify-center'>
-                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='https://www.linkedin.com/in/diane-besmonte' target='_blank' rel="noopener noreferrer">
+                        <a className='no-underline rounded-full bg-secondary p-3 m-3 xl:m-4 cursor-pointer hover:bg-tertiary' href='https://www.linkedin.com/in/diane-besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={linkedin} alt='linkedin logo'></img>
                         </a>
-                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='https://github.com/Diane-Besmonte' target='_blank' rel="noopener noreferrer">
+                        <a className='no-underline rounded-full bg-secondary p-3 m-3 xl:m-4 cursor-pointer hover:bg-tertiary' href='https://github.com/Diane-Besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={github2} alt='github logo'></img>
                         </a>
-                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='https://codepen.io/diane-besmonte' target='_blank' rel="noopener noreferrer">
+                        <a className='no-underline rounded-full bg-secondary p-3 m-3 xl:m-4 cursor-pointer hover:bg-tertiary' href='https://codepen.io/diane-besmonte' target='_blank' rel="noopener noreferrer">
                             <img src={codepen} alt='codepen logo'></img>
                         </a>
-                        <a className='no-underline rounded-full bg-secondary p-3 m-4 cursor-pointer hover:bg-tertiary' href='mailto:dianecoding@gmail.com'>
+                        <a className='no-underline rounded-full bg-secondary p-3 m-3 xl:m-4 cursor-pointer hover:bg-tertiary' href='mailto:dianecoding@gmail.com'>
                             <img src={email} alt='email logo'></img>
                         </a>
                     </div>
@@ -290,9 +290,9 @@ const Homepage = () => {
                 <div className='w-full lg:w-6/12'>
                     <h3 className='text-tertiary lg:text-4xl text-2xl text-center m-5'>Get in touch with me!</h3>
                     
-                    <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST">
-                        <div className='flex w-full justify-between '>
-                            <div className='form w-full px-5'>
+                    <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST" className='mx-10'>
+                        <div className='flex w-full justify-between'>
+                            <div className='form sameRow'>
                                 <label className='text-white text-left block my-4'>Name</label>
                                 <input
                                 type="text"
@@ -301,7 +301,7 @@ const Homepage = () => {
                                 className='border-2 border-tertiary bg-secondary text-sm text-white box-border w-full py-3 px-2.5'
                                 />
                             </div>
-                            <div className='form w-full mx-5'>
+                            <div className='form sameRow'>
                                 <label className='text-white text-left block my-4'>Email</label>
                                 <input
                                 type="email"
@@ -312,7 +312,7 @@ const Homepage = () => {
                             </div>                     
                         </div>
 
-                        <div className='form mx-5 w-11/12'>
+                        <div className='form w-full'>
                                 <label className='text-white text-left block my-4'>Subject</label>
                                 <input
                                 type="text"
@@ -322,15 +322,17 @@ const Homepage = () => {
                                 />
                         </div>   
 
-                        <div className='form mx-5 w-11/12'>
+                        <div className='form w-full'>
                                 <label className='text-white text-left block my-4'>Message</label>
                                 <textarea id="message" name="message" rows="8" placeholder='Message' className='text-left py-3 px-2.5 border-2 border-tertiary bg-secondary text-sm text-white w-full'></textarea>
                         </div>   
 
-                        <div className='submit my-5'>
-                            <a href="#submit"><button type="submit">Submit</button></a>
+                        <div className='submit my-5 text-center'>
+                            <a href="#submit"><button className='hover:bg-tertiary border-y-2 border-tertiary xl:py-3.5 md:py-2.5 sm:py-0.5 py-1.5 xl:px-14 md:px-10 sm:px-8 px-8 lg:mx-4 mx-1.5 md:text-xl text-l text-white' type="submit">Submit</button></a>
                         </div>
                         </form>
+
+
                 </div>
             </div>
 

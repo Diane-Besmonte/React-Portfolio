@@ -32,7 +32,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? 'block' : 'hidden'
-          } w-full left-0 px-0 py-5 absolute top-20 md:top-24 sm:top-20 bg-secondary lg:flex lg:items-center lg:relative  lg:w-auto lg:top-0  lg:bg-transparent`}
+          } w-full left-0 px-8 xl:px-20 lg:px-20 md:px-20 sm:px-10 py-5 absolute top-20 md:top-24 sm:top-20 bg-secondary lg:flex lg:items-center lg:relative  lg:w-auto lg:top-0  lg:bg-transparent`}
         >
           <ul className="flex flex-col lg:flex-row list-none w-full lg:w-auto">
             <li className="nav-item">
