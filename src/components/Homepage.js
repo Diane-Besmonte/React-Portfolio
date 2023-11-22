@@ -290,7 +290,7 @@ const Homepage = () => {
                 <div className='w-full lg:w-6/12'>
                     <h3 className='text-tertiary lg:text-4xl text-2xl text-center m-5'>Get in touch with me!</h3>
                     
-                    <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST" className='mx-10'>
+                    <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST" className='mx-0 lg:mx-10'>
                         <div className='flex w-full justify-between'>
                             <div className='form sameRow'>
                                 <label className='text-white text-left block my-4'>Name</label>
