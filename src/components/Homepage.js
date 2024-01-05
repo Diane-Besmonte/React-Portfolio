@@ -293,22 +293,22 @@ const Homepage = () => {
                     <form action="https://getform.io/f/b2342af1-c5a2-4dc2-a775-940643f06fc6" method="POST" className='mx-0 lg:mx-10'>
                         <div className='flex w-full justify-between'>
                             <div className='form sameRow'>
-                                <label className='text-white text-left block my-4'>Name</label>
+                                <label className='text-white text-left block my-4'>Name <span className='text-red-500'>*</span></label>
                                 <input
                                 type="text"
                                 name="name"
                                 placeholder='Full Name'
                                 className='border-2 border-tertiary bg-secondary text-sm text-white box-border w-full py-3 px-2.5'
-                                />
+                                required />
                             </div>
                             <div className='form sameRow'>
-                                <label className='text-white text-left block my-4'>Email</label>
+                                <label className='text-white text-left block my-4'>Email <span className='text-red-500'>*</span></label>
                                 <input
                                 type="email"
                                 name="email"
                                 placeholder='Email Address'
                                 className='border-2 border-tertiary bg-secondary text-sm text-white box-border w-full py-3 px-2.5'
-                                />
+                                required />
                             </div>                     
                         </div>
 
